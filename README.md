@@ -1,9 +1,10 @@
 # berlin-subway
 
-Route finding algorithm written in prolog.
+Route finding algorithm written in prolog.  
+Find all routes between station A and station B and sort them by shortest time.  
 
 <strong>Case study</strong>  
-Find all routes between station A and station B and sort them by shortest time.  
+
 Berlin Subway (Ubahn)  
 Mapped lines: U1 -> U9  
 
