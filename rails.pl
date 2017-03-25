@@ -17,7 +17,6 @@ route(A, B, Trains, Acc, R) :-
 % Case: intermediary station/s (I) between
 % departure (A) and destination (B).
 route(A, B, Trains, Acc0, R) :-
-    \+ member([A, _, B], Acc0),
     train(Train, Stations),
     \+ member(Train, Trains),
     member([A, _], Stations),
