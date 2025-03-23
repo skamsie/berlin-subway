@@ -12,3 +12,6 @@ indexof([Element|_], Element, 0):- !.
 indexof([_|Tail], Element, Index):-
     indexof(Tail, Element, Index1),!,
     Index is Index1+1.
+
+cli_mode :-
+    current_prolog_flag(argv, [_|_]).

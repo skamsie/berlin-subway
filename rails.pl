@@ -101,4 +101,5 @@ print_all([[[A, T, B, D, S]|Tail]|DistTime]) :-
 route(A, B) :-
     format('~n'),
     sort_fastest(A, B, R),
-    print_all(R).
+    print_all(R),
+    ( cli_mode -> format('~n') ; true ).
