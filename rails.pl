@@ -86,9 +86,8 @@ sort_all_routes(A, B, Sorted) :-
 % ───── REPL-friendly route/2 ─────
 
 route(A, B) :-
-    find_route(A, B, [], [], L),
-    distance_and_last_stop(L, [], StepsWithDistance),
-    route_with_totals(StepsWithDistance, [], 0, 0, R),
+    sort_all_routes(A, B, Sorted),
+    member(R, Sorted),
     print_all(R).
 
 % ───── CLI-friendly route/3 (text/json) ─────
