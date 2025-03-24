@@ -1,20 +1,19 @@
 :- use_module(library(lists)).
-:- use_module(library(lists)).       % already added, for member/2 etc.
-:- use_module(library(apply)).       % optional, for maplist, etc.
-:- use_module(library(ansi_term)).   % for colored output
-:- use_module(library(ordsets)).     % optional, for setof, etc.
 :- use_module(library(sort)).
+:- use_module(library(ansi_term)).
+:- use_module(library(http/json)).  % for JSON output!
 
 :- initialization(main, main).
 
 main :-
     current_prolog_flag(argv, Args),
-    (   Args = [From, To]
-    ->  atom_string(FromAtom, From),
-        atom_string(ToAtom, To),
+    (   append(Opts, [From, To], Args),
         consult('rails.pl'),
-        forall(route(FromAtom, ToAtom), true)
-    ;   writeln("Usage: ./rails FROM TO"),
+        ( member('--json', Opts)
+        ->  route(From, To, json)
+        ;   route(From, To, text)
+        )
+    ;   writeln("Usage: ./rails [--json] FROM TO"),
         halt(1)
     ),
     halt.

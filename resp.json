@@ -1,0 +1,28 @@
+{
+  "from": "otisstrasse",
+  "to": "rudow",
+  "routes": [
+    {
+      "steps": [
+        {
+          "step_nr": 1,
+          "from": "otisstrasse",
+          "to": "mehringdamm",
+          "line": "u6",
+          "direction": "alt-mariendorf",
+          "nr_stops": 17
+        },
+        {
+          "step_nr": 1,
+          "from": "mehringdamm",
+          "to": "rudow",
+          "line": "u7",
+          "direction": "rudow",
+          "nr_stops": 15
+        }
+      ],
+      "duration": "59.7 minutes",
+      "distance": "24.5 km"
+    }
+  ]
+}
