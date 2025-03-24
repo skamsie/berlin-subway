@@ -86,7 +86,7 @@ sort_all_routes(A, B, Sorted) :-
 % ───── REPL-friendly route/2 ─────
 
 route(A, B) :-
-    sort_all_routes(A, B, Sorted),
+    sort_all_routes(A, B, Sorted), !,
     member(R, Sorted),
     print_all(R).
 
