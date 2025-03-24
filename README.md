@@ -22,7 +22,7 @@ Launch the REPL in the project folder with ```swipl```
 - exit the repl with ```halt.```
 
 
-```bash
+```sh
 ?- [rails].
 true.
 
@@ -41,3 +41,10 @@ gleisdreieck u1 -> kottbusser tor  ❯ warschauer strasse (4)
 22.4 minutes / 7.8 km
 true .
 ```
+
+<strong>As binary</strong>
+
+- compile with `swipl -o rails -c main.pl`
+- run with `./rails alexanderplatz tempelhof`
+- or with json output `./rails --json alexanderplatz tempelhof`
+
