@@ -7,7 +7,7 @@
 :- use_module(library(ansi_term)).
 
 speed(9).             % m/s
-transfer_time(220).   % seconds
+transfer_time(240).   % seconds
 station_wait_time(20). % seconds
 
 % ───── Route Finding (Generator) ─────
@@ -78,6 +78,15 @@ route_with_totals(X, Y, R) :-
 
 all_routes(A, B, All) :-
     setof(L, route_with_totals(A, B, L), All).
+
+sort_all_routes(A, B, [DirectRoute]) :-
+    train(_, Stations),
+    member([A, _], Stations),
+    member([B, _], Stations),
+    find_route(A, B, [], [], L),
+    distance_and_last_stop(L, [], StepsWithDistance),
+    route_with_totals(StepsWithDistance, [], 0, 0, DirectRoute),
+    !.
 
 sort_all_routes(A, B, Sorted) :-
     all_routes(A, B, All),
