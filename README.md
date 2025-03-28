@@ -44,7 +44,7 @@ true .
 
 <strong>As binary</strong>
 
-- compile with `swipl -o rails -c main.pl`
+- compile with `swipl --stand_alone=true -o rails -c main.pl`
 - run with `./rails alexanderplatz tempelhof`
 - or with json output `./rails --json alexanderplatz tempelhof`
 
