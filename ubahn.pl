@@ -217,7 +217,7 @@ train(
         ['Paracelsus-Bad', 3600],
         ['Residenzstraße', 4500],
         ['Franz-Neumann-Platz', 5300],
-        ['Osloer-Straße', 6300],
+        ['Osloer Straße', 6300],
         ['Pankstraße', 7100],
         ['Gesundbrunnen', 7700],
         ['Voltastraße', 8500],
