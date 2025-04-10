@@ -26,25 +26,25 @@ Launch the REPL in the project folder with ```swipl```
 ?- [rails].
 true.
 
-?- route(alexanderplatz, 'kottbusser tor').
-
-alexanderplatz u8 -> kottbusser tor  ❯ hermannstrasse (4)
-6.9 minutes / 3.0 km
+?- route('Alexanderplatz', 'Mehringdamm').
+Alexanderplatz u5 -> Unter den Linden  ❯ Hauptbahnhof (3)
+Unter den Linden u6 -> Mehringdamm  ❯ Alt-Mariendorf (4)
+14.1 minutes / 4.2 km
 true ;
-alexanderplatz u2 -> stadtmitte  ❯ ruhleben (5)
-stadtmitte u6 -> hallesches tor  ❯ alt-mariendorf (2)
-hallesches tor u1 -> kottbusser tor  ❯ warschauer strasse (2)
-21.3 minutes / 5.9 km
+Alexanderplatz u2 -> Stadtmitte  ❯ Ruhleben (5)
+Stadtmitte u6 -> Mehringdamm  ❯ Alt-Mariendorf (3)
+15.0 minutes / 4.5 km
 true ;
-alexanderplatz u2 -> gleisdreieck  ❯ ruhleben (9)
-gleisdreieck u1 -> kottbusser tor  ❯ warschauer strasse (4)
-22.4 minutes / 7.8 km
-true .
+Alexanderplatz u8 -> Kottbusser Tor  ❯ Hermannstraße (4)
+Kottbusser Tor u3 -> Hallesches Tor  ❯ Krumme Lanke (2)
+Hallesches Tor u6 -> Mehringdamm  ❯ Alt-Mariendorf (1)
+20.3 minutes / 5.4 km
+true
 ```
 
 <strong>As binary</strong>
 
 - compile with `swipl --stand_alone=true -o rails -c main.pl`
-- run with `./rails alexanderplatz tempelhof`
-- or with json output `./rails --json alexanderplatz tempelhof`
+- run with `./rails Alexanderplatz "Kottbusser Tor"`
+- or with json output `./rails --json Alexanderplatz "Kottbusser Tor"`
 
