@@ -72,14 +72,15 @@ train(
         ['Spichernstraße', 8900],
         ['Hohenzollernplatz', 9500],
         ['Fehrbelliner Platz', 10300],
-        ['Rüdesheimer Platz', 11100],
-        ['Breitenbachplatz', 11900],
-        ['Podbielskiallee', 12900],
-        ['Dahlem-Dorf', 13800],
-        ['Freie Universität (Thielplatz)', 14600],
-        ['Oskar-Helene-Heim', 15600],
-        ['Onkel Toms Hütte', 16600],
-        ['Krumme Lanke', 17700]
+        ['Heidelberger Platz', 11500],
+        ['Rüdesheimer Platz', 12300],
+        ['Breitenbachplatz', 13100],
+        ['Podbielskiallee', 14100],
+        ['Dahlem-Dorf', 15000],
+        ['Freie Universität (Thielplatz)', 15800],
+        ['Oskar-Helene-Heim', 16800],
+        ['Onkel Toms Hütte', 17800],
+        ['Krumme Lanke', 18800]
     ]
 ).
 
